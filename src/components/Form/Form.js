@@ -126,7 +126,7 @@ const RegisterForm = () => {
                     <form onSubmit={handleSubmit} noValidate>
                         <Paper style={{ padding: 16 }}>
                             <Grid container alignItems="flex-start" spacing={4}>
-                                <Grid item xs={6}>
+                                <Grid item xs={12} sm={6}>
                                     <Field
                                         fullWidth
                                         required
@@ -136,7 +136,7 @@ const RegisterForm = () => {
                                         label="ФИО"
                                     />
                                 </Grid>
-                                <Grid item xs={5}>
+                                <Grid item xs={12} sm={5}>
                                     <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
                                         <Field
                                             name="birthDate"
@@ -153,7 +153,7 @@ const RegisterForm = () => {
                                         </OnChange>
                                     </MuiPickersUtilsProvider>
                                 </Grid>
-                                <Grid item xs={1}>
+                                <Grid item xs={12} sm={1}>
                                     <Typography align="right" component="p">
                                         {year && isValid(year) ? formatDistanceStrict( Date.parse(year), Date.now(), {
                                             addSuffix: false,
@@ -204,7 +204,7 @@ const RegisterForm = () => {
                                     />
                                 </Grid>
 
-                                <Grid item xs={6}>
+                                <Grid item xs={12} sm={6}>
                                     <Field
                                         fullWidth
                                         required
@@ -217,7 +217,7 @@ const RegisterForm = () => {
                                     />
 
                                 </Grid>
-                                <Grid item xs={6}>
+                                <Grid item xs={12} sm={6}>
                                     <Field
                                         fullWidth
                                         required
@@ -229,7 +229,7 @@ const RegisterForm = () => {
                                         label="ИНН"
                                     />
                                 </Grid>
-                                <Grid item xs={6}>
+                                <Grid item xs={12} sm={5} lg={6}>
                                     <Field
                                         fullWidth
                                         required
@@ -241,7 +241,7 @@ const RegisterForm = () => {
                                         label="Серия и номер паспорта"
                                     />
                                 </Grid>
-                                <Grid item xs={3}>
+                                <Grid item xs={12} sm={4} lg={3}>
                                     <Field
                                         fullWidth
                                         required
@@ -253,7 +253,7 @@ const RegisterForm = () => {
                                         label="Код подрозделения"
                                     />
                                 </Grid>
-                                <Grid item xs={3}>
+                                <Grid item xs={12} sm={3}>
                                     <MuiPickersUtilsProvider utils={DateFnsUtils} locale={ruLocale}>
                                         <Field
                                             name="issueDate"
@@ -265,7 +265,7 @@ const RegisterForm = () => {
                                 </Grid>
 
 
-                                <Grid item xs={2} style={{ marginTop: 16 }}>
+                                <Grid item xs={6} sm={2} style={{ marginTop: 16 }}>
                                     <Button
                                         type="button"
                                         variant="contained"
@@ -275,7 +275,7 @@ const RegisterForm = () => {
                                         Сбросить
                                     </Button>
                                 </Grid>
-                                <Grid item xs={2} style={{ marginTop: 16 }}>
+                                <Grid item xs={6} sm={2} style={{ marginTop: 16 }}>
                                     <Button
                                         variant="contained"
                                         color="primary"
